@@ -1,0 +1,81 @@
+.switch {
+    width: 480px;
+    height: 100px;
+    position: absolute;
+}
+.switch label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #a5a39d;
+    border-radius: 4px;
+    box-shadow:
+        inset 0 1px 1px 1px rgba(0,0,0,0),
+        
+}
+
+.switch label:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -8px; right: -8px; bottom: -8px; left: -8px;
+ 
+}
+.switch label:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -18px; right: -18px; bottom: -18px; left: -18px;
+    border-radius: inherit;
+}
+.switch label i {
+    display: block;
+    height: 100%;
+    width: 60%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    border-radius: inherit;
+    background: #b2ac9e; /* Fallback */
+    background: linear-gradient(#f7f2f6, #b2ac9e);
+
+}
+.switch label i:after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    width: 70%;
+    height: 50%;
+    background: #d2cbc3; 
+/*    background: linear-gradient(#cbc7bc, #d2cbc3);*/
+    border-radius: inherit;
+}
+.switch label i:before {
+    content: "PER TON";
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    margin-top: -12px;
+    color: #fff; 
+    font-style: normal;
+    font-size: 24px;
+    text-transform: uppercase;
+   }
+/* Background */
+.switch input:checked ~ label { 
+    background: #9abb82;
+}
+
+.switch input:checked ~ label i { /* Toggle */
+    left: auto;
+    right: -1%;
+}
+
+.switch input:checked ~ label i:before { 
+    content: "TRUCK";
+    right: 125%;
+    color: #fff;
+}
